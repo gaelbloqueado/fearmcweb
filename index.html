@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FearMC - Pagina Oficial</title>
+    <link rel="icon" href="/assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-bar"></div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                <h1>Fear<span>MC</span> Network</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="pages/info.html">Información</a></li>
+                    <li><a href="pages/join.html">Cómo unirse</a></li>
+                    <li><a href="pages/staff.html">Staff</a></li>
+                    <li><a href="pages/devteam.html">Equipo Dev</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+<!-- Modal de Soporte -->
+<div id="support-modal" class="support-modal-overlay">
+    <div class="support-modal">
+        <span class="support-close-btn" onclick="closeSupportModal()">&times;</span>
+        <h3>Soporte FearMC</h3>
+        <form id="discord-support-form" class="support-form">
+            <div class="form-group">
+                <label for="support-email">Correo Electrónico*</label>
+                <input type="email" id="support-email" required class="support-input" placeholder="tunombre@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="support-mcname">Usuario de Minecraft*</label>
+                <input type="text" id="support-mcname" required class="support-input" placeholder="gaelbloqueado1">
+            </div>
+            <div class="form-group">
+                <label for="support-discord">Usuario de discord y ID*</label>
+                <input type="text" id="support-discord" required class="support-input" placeholder="gaelbloqueado1 / 1306446330771800157">
+            </div>
+            <div class="form-group">
+                <label for="support-message">Mensaje*</label>
+                <textarea id="support-message" rows="5" required placeholder="¿Como puedo unirme al servidor usando Bedrock?" class="support-textarea"></textarea> 
+            </div>
+            <button type="submit" class="support-submit-btn">Enviar a Discord</button>
+            <div id="support-status" class="support-status"></div>
+        </form>
+    </div>
+</div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="slide-up">Bienvenido a <span id="texto"></span></h2>
+                    <p class="slide-up delay-1">El mejor servidor de Minecraft con una experiencia única y emocionante.</p>
+                    <div class="buttons slide-up delay-2">
+                        <a href="pages/join.html" class="btn-primary">Únete ahora</a>
+                        <a href="https://discord.fearmc.xyz" class="btn-secondary">Discord</a>
+                        <button class="btn-secondary" id="support-btn">Soporte</button>
+                    </div>
+                </div>
+                <div class="server-stats fade-in delay-3">
+                    <div class="stat">
+                        <h3>Jugadores en línea</h3>
+                        <p id="online-players">Cargando...</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Versión</h3>
+                        <p>1.20.x</p>
+                    </div>
+                    <div class="stat">
+                        <h3>IP</h3>
+                        <p>fearmc.xyz</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Nuestras <span>Características</span></h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <p><i class="fa-solid fa-ticket"></i></p>
+                        </div>
+                        <h3>Soporte Activo</h3>
+                        <p>Contamos con un Equipo de Staff eficiente para el soporte necesario.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">
+                            <p><i class="fa-solid fa-laptop-code"></i></p>
+                        </div>
+                        <h3>Maquina Estable</h3>
+                        <p>Contamos con un hosting estables para evitar lageos o subidas de ping.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">
+                            <p><i class="fa-solid fa-gift"></i></p>
+                        </div>
+                        <h3>Eventos Regulares</h3>
+                        <p>Eventos constantes con premios exclusivos para todos los jugadores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="container">
+                <h2 class="section-title">Últimas <span>Noticias</span></h2>
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="day">15</span>
+                        <span class="month">Mayo</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Cambios total en la estetica del servidor</h3>
+                        <p>Se han cambiado varios cambios en la estetica del servidor. ¡Ven a observarlo!</p>
+                        <a href="https://discord.fearmc.xyz" class="read-more">Leer más</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="day">13</span>
+                        <span class="month">Mayo</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>¡Estamos en desarollo de una nueva modalidad!</h3>
+                        <p>Estamos implementando esta nueva modalidad con características innovadoras. ¡Ven a observarlo!</p>
+                        <a href="https://discord.fearmc.xyz" class="read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FearMC</h3>
+                    <p>El mejor servidor de Minecraft con características únicas y una comunidad increíble.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/info.html">Información</a></li>
+                        <li><a href="pages/join.html">Cómo unirse</a></li>
+                        <li><a href="https://tienda.fearmc.xy">Tienda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Conéctate</h3>
+                    <ul>
+                        <li>IP: fearmc.xyz</li>
+                        <li><a href="https://discord.fearmc.xyz">Discord</a></li>
+                        <li><a href="https://tienda.fearmc.xy">Tienda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FearMC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="welcome-toast" class="toast">¡Bienvenido a la página de FearMC!</div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

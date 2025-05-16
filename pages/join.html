@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FearMC - Cómo Unirse</title>
+    <link rel="icon" href="/assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 120px 0 40px 0;
+            text-align: center;
+        }
+
+        .page-content {
+            padding-bottom: 80px;
+        }
+
+        .join-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: rgba(26, 26, 26, 0.6);
+            border-left: 4px solid var(--accent-color);
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(26, 26, 26, 0.8);
+        }
+
+        .step-number {
+            background-color: var(--accent-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .step-content p {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .step-content ul {
+            margin: 10px 0 10px 20px;
+            color: var(--text-secondary);
+        }
+
+        .step-content li {
+            margin-bottom: 5px;
+        }
+
+        .join-extra {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .join-extra h2 {
+            margin-bottom: 15px;
+        }
+
+        .join-extra p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .screenshot {
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .step {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .step-number {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Logo" class="logo-img">
+                <h1>Fear<span>MC</span> Network</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="info.html">Información</a></li>
+                    <li><a href="join.html" class="active">Cómo unirse</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    <li><a href="devteam.html">Equipo Dev</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="slide-up">Cómo <span>Unirse</span></h1>
+                <p class="slide-up delay-1">Sigue estos sencillos pasos para unirte a nuestra comunidad de FearMC.</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="join-steps">
+                    <div class="step slide-up">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Asegúrate de tener Minecraft</h3>
+                            <p>Necesitas un Cliente de Minecraft Java Edition / Bedrock Edition para poder conectarte a nuestro servidor.</p>
+                            <ul>
+                                <li>Versión compatible: 1.20.x</li>
+                                <li>En versiones mas baja podria haber errores.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step slide-up delay-1">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Abre Minecraft y haz clic en "Multiplayer"</h3>
+                            <p>En el menú principal de Minecraft, selecciona la opción "Multiplayer" para acceder a la lista de servidores.</p>
+                            <div class="screenshot">
+                                <img src="../assets/multiplayer.png" alt="image">
+                                <div class="screenshot-caption">Opcion Multiplayer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step slide-up delay-2">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Agrega el servidor FearMC</h3>
+                            <p>Haz clic en "Add Server" y completa la información con los siguientes datos:</p>
+                            <ul>
+                                <li><strong>Server Name:</strong> FearMC (o el nombre que prefieras)</li>
+                                <li><strong>Server Address:</strong> fearmc.xyz</li>
+                            </ul>
+                            <p>En Java Edition no es necesario añadir el puerto, puerto para Bedrock Edition (26542).</p>
+                            <div class="screenshot">
+                                <img src="../assets/addserver.png" alt="Agregar servidor">
+                                <div class="screenshot-caption">Opcion Add Server</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step slide-up delay-3">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Conéctate y disfruta</h3>
+                            <p>Selecciona el servidor FearMC en tu lista y haz clic en "Join Server". ¡Bienvenido a nuestra comunidad!</p>
+                            <p>Al conectarte por primera vez, te recomendamos leer las reglas del servidor y visitar el spawn para orientarte.</p>
+                            <div class="screenshot">
+                                <img src="../assets/fearmcnt.png" alt="Unirse al servidor">
+                                <div class="screenshot-caption">Unirse al servidor FearMC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="join-extra slide-up delay-4">
+                    <h2>¿Necesitas ayuda?</h2>
+                    <p>Si tienes problemas para conectarte o alguna pregunta sobre el servidor, únete a nuestro servidor de Discord donde nuestro equipo de soporte estará encantado de ayudarte.</p>
+                    <a href="https://discord.fearmc.xyz" class="btn-primary">Unirse a Discord</a>
+
+                    <div style="margin-top: 30px;">
+                        <h3>Información adicional</h3>
+                        <p><strong>IP del servidor:</strong> fearmc.xyz</p>
+                        <p><strong>Versión:</strong> 1.20.x (compatible con varias versiones)</p>
+                        <p><strong>Tienda:</strong> <a href="https://tienda.fearmc.xy" style="color: var(--accent-color);">tienda.fearmc.xy</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FearMC</h3>
+                    <p>El mejor servidor de Minecraft con características únicas y una comunidad increíble.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="info.html">Información</a></li>
+                        <li><a href="join.html">Cómo unirse</a></li>
+                        <li><a href="https://tienda.fearmc.xy">Tienda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Conéctate</h3>
+                    <ul>
+                        <li>IP: fearmc.xyz</li>
+                        <li><a href="https://discord.fearmc.xyz">Discord</a></li>
+                        <li><a href="https://tienda.fearmc.xy">Tienda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FearMC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

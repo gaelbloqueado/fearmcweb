@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FearMC - Staff Team</title>
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .page-header {
+      padding: 120px 0 40px 0;
+      text-align: center;
+    }
+
+    .page-content {
+      padding-bottom: 80px;
+    }
+
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .staff-card {
+      background: rgba(26, 26, 26, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .staff-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      background: rgba(26, 26, 26, 0.8);
+    }
+
+    .staff-card img.face {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .staff-card h3 {
+      color: var(--accent-color);
+      margin: 10px 0 5px;
+    }
+
+    .staff-card p {
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-red {
+      background-color: #dc2626; 
+      color: white;
+    }
+
+    .badge-red1 {
+      background-color: #c50c0c;
+      color: white;
+    }
+
+    .badge-blue {
+      background-color: #1216ff; 
+      color: white;
+    }
+
+    .badge-blue1 {
+      background-color: #591cff; 
+      color: white;
+    }
+
+    .badge-green {
+      background-color: #14ec00; 
+      color: white;
+    }    
+
+    .badge-cyan {
+      background-color: #12e3ff; 
+      color: white;
+    } 
+    
+    .badge-yellow {
+      background-color: #ddff1b; 
+      color: white;
+    } 
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal h3 {
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    .modal p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .modal img.body {
+      max-width: 160px;
+      margin: 10px 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Logo" class="logo-img">
+        <h1>Fear<span>MC</span> Network</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="info.html">Información</a></li>
+          <li><a href="join.html">Cómo unirse</a></li>
+          <li><a href="staff.html" class="active">Staff</a></li>
+          <li><a href="devteam.html">Equipo Dev</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="slide-up">Equipo de <span>Staff</span></h1>
+        <p class="slide-up delay-1">Estas son las personas que cuidan y gestionan el servidor.</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+        <div class="staff-grid slide-up delay-2">
+          <!-- 1 -->
+          <div class="staff-card" onclick="showModal('Kayneeh', 'Owner & Staff Manager', 'Kayneeh se encarga de mantener el orden dentro del Staff junto con la administracion del servidor.', 'f528fd39-8c25-44be-8aef-c9187b082dc6')">
+            <img src="https://skins.mcstats.com/face/f528fd39-8c25-44be-8aef-c9187b082dc6" class="face" />
+            <h3>Kayneeh</h3>
+            <span class="badge badge-red">Owner</span>
+          </div>
+
+          <!-- 2 -->
+          <div class="staff-card" onclick="showModal('JavierPaisano', 'Owner & Media Manager', 'Javier mantiene los medias del servidor activos al igual que construye todos los mapas de FearMC.', '7667daa5-668d-4db9-b796-a82bea9a7ec0')">
+            <img src="https://skins.mcstats.com/face/7667daa5-668d-4db9-b796-a82bea9a7ec0" class="face" />
+            <h3>JavierPaisano</h3>
+            <span class="badge badge-red">Owner</span>
+          </div>
+
+          <!-- 6 -->
+          <div class="staff-card" onclick="showModal('gonzaaje', 'Owner & Configurador', 'Gonzaaje se encarga de la administracion del servidor junto al desarollo de modalidades.', '17ea9445-fc14-480e-a2d1-fa382b03062b')">
+            <img src="https://skins.mcstats.com/face/17ea9445-fc14-480e-a2d1-fa382b03062b" class="face" />
+            <h3>Gonzaaje</h3>
+            <span class="badge badge-red">Owner</span>
+          </div>
+
+          <!-- 3 -->
+          <div class="staff-card" onclick="showModal('Matxxs_', 'Co-Owner', 'Matxs aporta plugins para que FearMC sea una mejor experencia.', 'bc062ff9-e36e-4fb6-afdd-b7c19c379aec')">
+            <img src="https://skins.mcstats.com/face/bc062ff9-e36e-4fb6-afdd-b7c19c379aec" class="face" />
+            <h3>Matxxs_</h3>
+            <span class="badge badge-red1">Co-Owner</span>
+          </div>
+
+          <!-- 4 -->
+          <div class="staff-card" onclick="showModal('Amistades', 'Plat-Admin & Configurador', 'Amistades tiene control sobre el Staff y tiene aportacion con el desarollo de FearMC.', '0844115d-8f5f-4d06-935d-27c207b05856')">
+            <img src="https://skins.mcstats.com/face/0844115d-8f5f-4d06-935d-27c207b05856" class="face" />
+            <h3>Amistades</h3>
+            <span class="badge badge-blue">Plat-Admin</span>
+          </div>
+
+          <!-- 5 -->
+          <div class="staff-card" onclick="showModal('pol4cocps', 'Plat-Admin', 'Pol4cocps se encarga de la seguridad del servidor.', '9a9183bb-d0f5-4d12-b703-25652664a16a')">
+            <img src="https://skins.mcstats.com/face/9a9183bb-d0f5-4d12-b703-25652664a16a" class="face" />
+            <h3>pol4cocps</h3>
+            <span class="badge badge-blue">Plat-Admin</span>
+          </div>
+
+          <!-- 7 -->
+          <div class="staff-card" onclick="showModal('Linox66', 'Sr-Admin', 'Linox66 se encarga de moderar el servidor y ayudar con temas en SS.', '17ea9445-fc14-480e-a2d1-fa382b03062b')">
+            <img src="https://skins.mcstats.com/face/17ea9445-fc14-480e-a2d1-fa382b03062b" class="face" />
+            <h3>Linox66</h3>
+            <span class="badge badge-green">Sr-Admin</span>
+          </div>
+
+          <!-- 8 -->
+          <div class="staff-card" onclick="showModal('iMainSistem', 'Sr-Mod', 'iMainSistem se encarga de la moderacion del servidor.', 'ab12ac83-5d90-483e-a939-161bec6d157d')">
+            <img src="https://skins.mcstats.com/face/ab12ac83-5d90-483e-a939-161bec6d157d" class="face" />
+            <h3>iMainSistem</h3>
+            <span class="badge badge-blue1">Sr-Mod</span>
+          </div>
+
+          <!-- 9 -->
+          <div class="staff-card" onclick="showModal('XX_Marcos45_XX', 'Jr-Mod', 'XX_Marcos45_XX se encarga de la moderacion del servidor.', '89711d10-4025-496a-8b40-feba24252f24')">
+            <img src="https://skins.mcstats.com/face/89711d10-4025-496a-8b40-feba24252f24" class="face" />
+            <h3>XX_Marcos45_XX</h3>
+            <span class="badge badge-cyan">Jr-Mod</span>
+          </div>
+
+          <!-- 10 -->
+          <div class="staff-card" onclick="showModal('rChuyin', 'Jr-Mod', 'rChuyin se encarga de la moderacion del servidor.', '7afe3c95-d299-44f1-960b-04f86bf37d87')">
+            <img src="https://skins.mcstats.com/face/7afe3c95-d299-44f1-960b-04f86bf37d87" class="face" />
+            <h3>rChuyin</h3>
+            <span class="badge badge-cyan">Jr-Mod</span>
+          </div>          
+
+          <!-- 11 -->
+          <div class="staff-card" onclick="showModal('josemig2912', 'Soporte', 'josemig2912 se encarga de la moderacion del servidor.', 'd2c2db75-ee6a-42af-951e-1bca03267455')">
+            <img src="https://skins.mcstats.com/face/d2c2db75-ee6a-42af-951e-1bca03267455" class="face" />
+            <h3>josemig2912</h3>
+            <span class="badge badge-yellow">Soporte</span>
+          </div>
+
+          <!-- 12 -->
+          <div class="staff-card" onclick="showModal('Aim_Legit', 'Soporte', 'Aim_Legit se encarga de la moderacion del servidor.', '822e2cd4-69fc-47ff-8a98-c395d0539492')">
+            <img src="https://skins.mcstats.com/face/822e2cd4-69fc-47ff-8a98-c395d0539492" class="face" />
+            <h3>Aim_Legit</h3>
+            <span class="badge badge-yellow">Soporte</span>
+          </div>          
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3 id="modal-name"></h3>
+      <p id="modal-role" class="badge"></p>
+      <img id="modal-img" class="body" src="" alt="Skin completa" />
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FearMC</h3>
+          <p>El mejor servidor de Minecraft con características únicas y una comunidad increíble.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="info.html">Información</a></li>
+            <li><a href="join.html">Cómo unirse</a></li>
+            <li><a href="https://tienda.fearmc.xy">Tienda</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Conéctate</h3>
+          <ul>
+            <li>IP: fearmc.xyz</li>
+            <li><a href="https://discord.fearmc.xyz">Discord</a></li>
+            <li><a href="https://tienda.fearmc.xy">Tienda</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FearMC. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function showModal(name, role, desc, uuid) {
+      document.getElementById('modal-name').textContent = name;
+      document.getElementById('modal-role').textContent = role;
+      document.getElementById('modal-img').src = `https://skins.mcstats.com/body/front/${uuid}`;
+      document.getElementById('modal-desc').textContent = desc;
+
+      // Badge color detection
+      const badge = document.getElementById('modal-role');
+      badge.className = 'badge';
+      if (role.toLowerCase().includes('admin')) badge.classList.add('badge-red222');
+      else if (role.toLowerCase().includes('moderador')) badge.classList.add('badge-green222');
+
+      document.getElementById('modal-overlay').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
